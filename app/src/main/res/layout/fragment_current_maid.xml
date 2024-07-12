@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app_screen"
+    tools:context=".ui.fragments.home.CurrentMaidFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/currentMaidNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppinsregular"
+            android:maxWidth="270dp"
+            android:maxHeight="50dp"
+            android:text="@string/currentMaidName"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/maidDetailsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="@string/enterDetailsBelow"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/currentMaidNameTextView" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="invisible"
+            android:id="@+id/currentMaidLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_edittext_round"
+            android:padding="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/maidDetailsTextView">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/maidCircleImageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="250dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="250dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/image1" />
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/maidNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:fontFamily="@font/poppinsregular"
+                android:maxWidth="200dp"
+                android:text="@string/maidName"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@id/maidAgeTextView"
+                app:layout_constraintStart_toEndOf="@id/maidCircleImageView"
+                app:layout_constraintTop_toTopOf="@id/maidCircleImageView"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/maidAgeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="@string/maidAge"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@id/maidCircleImageView"
+                app:layout_constraintStart_toStartOf="@id/maidNameTextView"
+                app:layout_constraintTop_toBottomOf="@id/maidNameTextView" />
+
+            <TextView
+                android:id="@+id/maidTimePeriodTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="@string/perMonth"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/maidNameTextView" />
+
+            <TextView
+                android:id="@+id/maidSalaryPackageTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/maidSalaryDemand"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/maidTimePeriodTextView"
+                app:layout_constraintTop_toBottomOf="@id/maidTimePeriodTextView" />
+
+            <TextView
+                android:id="@+id/ratingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="@string/rating"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@id/maidCircleImageView"
+                app:layout_constraintStart_toStartOf="@id/maidNameTextView"
+                app:layout_constraintTop_toBottomOf="@id/maidAgeTextView" />
+
+            <TextView
+                android:id="@+id/locationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppinsregular"
+                android:maxWidth="200dp"
+                android:text="@string/location"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/maidCircleImageView" />
+
+            <TextView
+                android:id="@+id/locationNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="@string/placeName"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/locationTextView" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/locationTextView" />
+
+            <TextView
+                android:id="@+id/availabilityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinsregular"
+                android:maxWidth="200dp"
+                android:text="@string/availability"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/locationTextView" />
+
+            <TextView
+                android:id="@+id/availabilityTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="@string/halfTime"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/availabilityTextView" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/availabilityTextView" />
+
+            <TextView
+                android:id="@+id/serviceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinsregular"
+                android:maxWidth="200dp"
+                android:text="@string/service"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/availabilityTextView" />
+
+            <TextView
+                android:id="@+id/serviceNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="@string/servicesName"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/serviceTextView" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/serviceTextView" />
+
+            <TextView
+                android:id="@+id/experienceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinsregular"
+                android:maxWidth="200dp"
+                android:text="@string/experience"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/serviceTextView" />
+
+            <TextView
+                android:id="@+id/experienceYearTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="@string/experienceYears"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/experienceTextView" />
+
+            <Button
+                android:id="@+id/cancelEmploymentButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/cancelEmployment"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/experienceTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/pastMaidTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppinsregular"
+            android:maxWidth="270dp"
+            android:maxHeight="50dp"
+            android:text="@string/pastMaid"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/currentMaidLayout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pastMaidListRecycleView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pastMaidTextView"
+            tools:listitem="@layout/past_maid_layout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

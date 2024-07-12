@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_current_maid"
+        android:title="@string/currentMaid"
+        android:icon="@drawable/ic_drawer_maid"/>
+    <item
+        android:id="@+id/item_notifications"
+        android:title="@string/notifications"
+        android:icon="@drawable/ic_notifications"
+        />
+    <item
+        android:id="@+id/item_invite_friend"
+        android:title="@string/invite_a_friend"
+        android:icon="@drawable/ic_drawer_invite"
+      />
+    <item
+        android:id="@+id/item_cancel_booking"
+        android:title="@string/cancel_booking"
+        android:icon="@drawable/ic_drawer_cancel_book"/>
+    <item
+        android:id="@+id/item_how_works"
+        android:title="@string/how_it_works"
+        android:icon="@drawable/ic_drawer_works"
+      />
+    <item
+        android:id="@+id/item_about"
+        android:title="@string/about_us"
+        android:icon="@drawable/ic_drawer_about"
+       />
+    <item
+        android:id="@+id/item_help"
+        android:title="@string/help"
+        android:icon="@drawable/ic_drawer_help" />
+</menu>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app_screen"
+    tools:context=".ui.fragments.user.LoginFragment">
+
+    <ImageView
+        android:id="@+id/iconHomeServiceImageview"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/ic_app_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/welcomeBackTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:textAllCaps="true"
+        android:text="@string/welcomeBack"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iconHomeServiceImageview" />
+
+    <TextView
+        android:id="@+id/enterDetailBelowTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/enterDetailsBelow"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeBackTextView" />
+
+    <EditText
+        android:id="@+id/usernameEmailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_marginTop="70dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/bg_edittext_round"
+        android:fontFamily="@font/poppins_light"
+        android:hint="@string/enterUserNameEmail"
+        android:paddingHorizontal="30dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/hint_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeBackTextView" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_edittext_round"
+        android:fontFamily="@font/poppins_light"
+        android:hint="@string/enterPassword"
+        android:inputType="textPassword"
+        android:paddingHorizontal="30dp"
+        android:layout_marginHorizontal="30dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/hint_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/usernameEmailEditText" />
+
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="45dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/poppinsregular"
+        android:text="@string/signIn"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/passwordEditText"
+        app:layout_constraintStart_toStartOf="@id/passwordEditText"
+        app:layout_constraintTop_toBottomOf="@id/passwordEditText" />
+
+    <TextView
+        android:id="@+id/alreadyHaveAnAccountTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/donNotHaveAnAccount"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/signUpTextview"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/signUpTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="@string/signup"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/alreadyHaveAnAccountTextview"
+        app:layout_constraintStart_toEndOf="@id/alreadyHaveAnAccountTextview" />
+
+    <TextView
+        android:id="@+id/howItWorkTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/howItWork"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/watchVideoTextview"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alreadyHaveAnAccountTextview" />
+
+    <TextView
+        android:id="@+id/watchVideoTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="@string/watchVideo"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/howItWorkTextview"
+        app:layout_constraintTop_toTopOf="@id/howItWorkTextview" />
+</androidx.constraintlayout.widget.ConstraintLayout>

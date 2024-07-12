@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_marginStart="10dp"
+        android:id="@+id/notificationImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_notification_appointed"/>
+    <TextView
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintEnd_toStartOf="@id/notificationDateTextView"
+        android:id="@+id/notificationTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/poppinsregular"
+        android:maxWidth="270dp"
+        android:maxHeight="50dp"
+        android:text="@string/maidAppointed"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/notificationImageView"
+        app:layout_constraintTop_toTopOf="@id/notificationImageView"
+        app:layout_constraintBottom_toBottomOf="@id/notificationImageView"/>
+
+    <TextView
+        android:layout_marginEnd="10dp"
+        android:id="@+id/notificationDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:maxWidth="270dp"
+        android:maxHeight="50dp"
+        android:text="@string/date"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notificationTitleTextView"
+       />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notificationDateTextView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app_screen"
+    tools:context=".ui.fragments.home.HomeScreenFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/heyNameUserTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:maxWidth="270dp"
+                android:maxHeight="50dp"
+                android:text="@string/hey"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/goodMorningTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="@string/goodMorning"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@id/heyNameUserTextView"
+                app:layout_constraintTop_toBottomOf="@id/heyNameUserTextView" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/maidCircleImageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="250dp"
+                app:layout_constraintBottom_toBottomOf="@id/goodMorningTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/heyNameUserTextView">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="250dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/image1" />
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/maidSearchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="80dp"
+                android:background="@drawable/bg_edittext_round"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/goodMorningTextView"
+                app:queryHint="@string/searchMaid" />
+
+            <ImageView
+                android:id="@+id/filterButtonImageView"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_filter"
+                app:layout_constraintBottom_toBottomOf="@id/maidSearchView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/maidSearchView"
+                app:layout_constraintTop_toTopOf="@id/maidSearchView" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/filterDialogConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/bg_edittext_round"
+                android:paddingHorizontal="30dp"
+                android:paddingVertical="10dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/maidSearchView">
+
+                <TextView
+                    android:id="@+id/enterPriceRangeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="@string/priceRange"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/enterPriceRangeEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/bg_edittext_round"
+                    android:fontFamily="@font/poppins_light"
+                    android:hint="@string/enterPrice"
+                    android:maxWidth="250dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="5dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="@id/enterPriceRangeTextView"
+                    app:layout_constraintTop_toBottomOf="@id/enterPriceRangeTextView" />
+
+                <TextView
+                    android:id="@+id/enterAreaTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="@string/ares"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/enterPriceRangeEditText" />
+
+                <EditText
+                    android:id="@+id/enterAreaEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/bg_edittext_round"
+                    android:fontFamily="@font/poppins_light"
+                    android:hint="@string/enterArea"
+                    android:maxWidth="250dp"
+                    android:maxHeight="100dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="5dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="@id/enterPriceRangeTextView"
+                    app:layout_constraintTop_toBottomOf="@id/enterAreaTextView" />
+
+                <TextView
+                    android:id="@+id/availabilityTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="@string/availability"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/enterAreaEditText" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/availabilityChipGroup"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/availabilityTextView"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/halfTimeChipView"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/halfTime" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/fullTimeChipView"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fullTime" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <TextView
+                    android:id="@+id/serviceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="@string/service"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/availabilityChipGroup" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/serviceChipGroup"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/serviceTextView"
+                    app:singleSelection="false">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/cleaningChipView"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cleaning" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/clothChipView"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/clothes" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/toiletsChipView"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/toilets" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/clothPressingChipView"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/clothesPressing" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/babyCareChipView"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/babyCare" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <Button
+                    android:id="@+id/applyFiltersButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="@string/applyFilters"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/serviceChipGroup" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/maidListRecycleView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/filterDialogConstraintLayout"
+                tools:listitem="@layout/maid_name_layout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
